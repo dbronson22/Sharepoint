@@ -1,0 +1,4 @@
+Paste these two lines in a script editor or include them in any existing code for a page after uploading the files to site assets.
+
+<script type="text/javascript" src="http://yoursite/sites/yourlibrary/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="http://yoursite/sites/yourlibrary/StickyHeaders_3.1.1.js"></script>
