@@ -1,0 +1,26 @@
+    <!-- This code is used on the AFD Home page to show drop down items for adding and viewing calendar items -->
+    <style>
+        .ms-rtestate-field {
+            text-align: center !important;
+        }
+    </style>
+
+    <h1 class="ms-rteElement-H1">Admin Requests</h1>
+    <select name="mydropdown" class="styled">
+        <option>Please Select...</option>
+        <option onclick="return OpenNewFormPopup('Admin Request', 'http://insidegulfstream.com/teams/spc/admin/_layouts/15/listform.aspx?PageType=8&ListId=%7B5A78CBCF%2DA855%2D4E95%2DBD72%2DF323D08D3D73%7D&RootFolder=')">Admin Request List</option>
+    </select>
+
+    <script type="text/javascript">
+        function OpenNewFormPopup(title, url) {
+
+            var options = SP.UI.$create_DialogOptions();
+            options.title = title;
+            options.width = 800;
+            options.height = 700;
+            options.url = url
+            SP.UI.ModalDialog.showModalDialog(options);
+            return false;
+        }
+    </script>
+  
