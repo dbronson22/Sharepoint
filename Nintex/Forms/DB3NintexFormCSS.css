@@ -1,0 +1,71 @@
+/*---Starting Added CSS---*/
+
+.SaveButton
+{
+    background-color: rgba(0, 127, 0, .3)!important;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.CancelButton
+{
+    background-color: rgba(192, 0, 0, .3)!important;
+    font-weight: bold;
+    border-radius: 5px;
+}
+ 
+/*Divider located under program need date and PEM*/
+.Divider
+{
+opacity: 0.4!important;
+} 
+/*Rounds corners off header*/
+.BorderRadiusHeader
+{
+border-radius: 15px 15px 0px 0px;
+}
+/*Labels for Next steps/owner/planned/actual cd*/
+.HeadOutlines
+{
+border-color: rgba(0, 0, 0, 0.49);
+border-style: solid;
+border-width: 1px;
+border-radius: 5px;
+vertical-align:sub;
+}
+/*Solid rounded border for the right panel*/
+.STPanel
+{
+border-radius: 10px;
+border-color: rgba(0, 0, 0, 0.49);
+border-style: solid;
+border-width: 1px;
+}
+/*Solid rounded border for State tracking*/
+.StateTrackPanels
+{
+    border-color: rgba(0, 34, 90, .6);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+/*Solid rounded border for repeating section*/
+.RepeatingSection
+{
+    border-color: rgba(0, 0, 0, .6);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+} 
+ 
+/* Rounds the borders of the entire form */
+.nf-outer 
+{
+    border-radius: 15px;
+}
+ 
+/* Drop shadow */
+.BoxShadow
+{
+    box-shadow: 5px 5px 15px #888888;
+}
+/*---Ending Added CSS---*/
