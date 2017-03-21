@@ -1,0 +1,23 @@
+/* Styling to apply highlighted rows to lists*/
+<style>
+
+    /* Set border for every row */
+    .ms-listviewtable > tbody > tr td{
+        border-bottom: 1px solid #AFAFAF !important; /* !important needed over override SharePoint inline style */
+        border-left: 1px solid #AFAFAF !important;
+        border-right: 1px solid #AFAFAF !important;
+    }
+
+    /* Set background for every alternating row */
+    .ms-listviewtable > tbody > tr.ms-alternating {
+        background: #E2E3E5;
+    }
+	
+	/* This code makes modifications to the ARP tab plus its associates */
+	/* Set column titles to bold */
+	.ms-stylelabel {
+    font-weight: bold;
+}
+
+
+</style>
