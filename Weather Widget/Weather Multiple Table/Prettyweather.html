@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://cdn.jquerytools.org/1.1.2/full/jquery.tools.min.js" type="text/javascript"></script>
+<script src="http://insidegulfstream.com/teams/spc/Sandbox4DB3/Site%20Assets/jquery.zweatherfeed.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () 
+	{
+        $('#weather').weatherfeed(['90210', '75201', '37201', '33101'], {}, function (e) 
+		{
+            $("div.scrollable").scrollable(
+			{
+                vertical: true,
+                size: 1
+            }).circular().navigator().autoscroll(
+			{
+                interval: 3000
+            });
+        });
+    });
+
+</script>
+
+<body>
+<div class="scrollable verticalweather">
+    <div id="weather" class="items" ></div>
+</div>
+  
+<div class="navi" ></div>

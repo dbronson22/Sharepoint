@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<table>
+<tr>
+<table width="100%" class="ms-rteTable-default" cellspacing="0">
+   <tbody>
+      <tr>
+         <th div id="weather" class="weather"></div></th>
+		 <th div id="weather2" class="weather"></div></th>
+		 <th div id="weather3" class="weather"></div></th>
+		 <th div id="weather4" class="weather"></div></th>
+		 <th div id="weather5" class="weather"></div></th>
+      </tr>
+   </tbody>
+</table>
+<p>&#160;</p>
+
+<script type="text/javascript" src="http://insidegulfstream.com/teams/spc/Sandbox4DB3/Site%20Assets/jquery.simpleWeather.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+  $.simpleWeather({
+    woeid: '', //2357536
+    location: 'miami, fl',
+    unit: 'f',
+    success: function(weather) {
+      if(weather.temp > 75) {
+        $('body').animate({backgroundColor: '#F7AC57'}, 1500);
+      } else {
+        $('body').animate({backgroundColor: '#0091c2'}, 1500);
+      }
+      html = '<h1 class="icon-'+weather.code+'"></h1>';
+      html += '<h2>'+weather.temp+'&deg;</h2>';
+      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+      html += '<li class="currently">'+weather.currently+'</li></ul>';
+      //html += '<li>'+weather.tempAlt+'&deg;C</li></ul>';
+      
+      var timestamp = moment(weather.updated);
+      html += '<p class="updated">Updated '+moment(timestamp).fromNow()+'</p>';
+  
+      $("#weather").html(html);
+    },
+    error: function(error) {
+      $("#weather").html('<p>'+error+'</p>');
+    }
+  });
+});
